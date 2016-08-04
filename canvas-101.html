@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<style>
+	canvas{
+		border:  2px solid blue;
+	}
+</style>
+<body>
+
+<canvas class="the-canvas" height="500px" width="800px">
+<!-- Canvas cannot draw. it is an empty space in which to draw. 
+	Our stuff goes HERE-->
+	
+</canvas>
+
+<script>
+	var canvas = document.getElementsByClassName('the-canvas')[0];
+	var context = canvas.getContext('2d');
+	console.log(context);
+
+	// context.beginPath();
+	// context.moveTo(100,100);
+	// context.lineTo(200,200);
+	// context.lineTo(300,100);
+	// context.lineTo(100,200);
+	// context.lineTo(300,150);
+	// context.lineTo(100,100);
+	// context.moveTo(100,500);
+	// context.lineTo(100,100);
+	// context.strokeStyle = "#654321"			
+	// context.stroke();
+
+	// // draw a circle
+
+	// context.beginPath();
+	// context.fillStyle = "#FFFF00";
+	// context.arc(375,175,50, 0.25*Math.PI, 1.75*Math.PI);
+	// context.fill();
+
+	// //draw a rectangle
+
+	// context.beginPath();
+	// context.rect(300, 20, 100, 100);
+	// context.stroke();
+
+	var x = 400;
+	var y = 250;
+	var radius = 80;
+	var endArc = 2;
+	var r = 0;
+	var g = 0;
+	var b = 0;
+
+	function draw(){
+		context.fillStyle = "#"+r+g+b;
+		context.beginPath();
+		context.clearRect(0,0,800,500);
+		context.arc(x,y,radius,0,endArc*Math.PI);
+		context.fill();
+		x += 4;
+		y += 10;
+		radius += 1;
+		endArc += .1
+	}
+
+	function drawCrap(){
+		draw();
+		for (var i = 0; i < 800; i++) {
+			if (screenX == 800){
+			setInterval(draw, 100);
+		} else {setInterval(draw, -100);}
+		}
+
+	}
+
+drawCrap();
+// var ball = setInterval(draw,40);
+
+
+</script>
+
+</body>
+</html>

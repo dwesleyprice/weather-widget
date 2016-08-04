@@ -1,0 +1,32 @@
+body{ 
+    background: url(bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.row{
+	background: url("bg.png");
+	background-color: #DDDDEE;
+}
+
+.form{
+	margin: auto;
+	text-align: center;
+	z-index: 100;
+	background: url("bg.png");
+	background-color: #DDDDEE;
+}
+
+canvas{
+	border: 1px solid black;
+}
+
+.bg-img{
+	z-index: 1;
+}
+
+#bottom{
+	height: 200px;
+}
